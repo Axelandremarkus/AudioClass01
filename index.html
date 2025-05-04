@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clickable Sound Example</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+
+  <h1>Class 01</h1>
+
+  <!-- Clickable word that triggers the embed when clicked -->
+  <p>
+    <a href="#" onclick="showAudio('Ambience'); return false;">
+      Ambience
+    </a>
+  </p>
+
+  <p>
+    <a href="#" onclick="showAudio('Input 1'); return false;">
+      Input 1
+    </a>
+  </p>
+
+<p>
+    <a href="#" onclick="showAudio('Input 2'); return false;">
+      Input 2
+    </a>
+  </p>
+
+<a href="#" onclick="showAudio('Input 3'); return false;">
+      Input 3
+    </a>
+  </p>
+
+<a href="#" onclick="showAudio('Grammar'); return false;">
+      Grammar
+    </a>
+  </p>
+
+<a href="#" onclick="showAudio('Get Inspired 1'); return false;">
+      Get Inspired 1
+    </a>
+  </p>
+
+<a href="#" onclick="showAudio('Get Inspired 2'); return false;">
+      Get Inspired 2
+    </a>
+  </p>
+
+
+  <!-- Embed code for SoundCloud (each embed is hidden initially) -->
+  <div id="Ambience" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/ambience-1&auto_play=true">
+    </iframe>
+  </div>
+
+  <div id="Input 1" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/input-1-5&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Input 2" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/input-2-6&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Input 3" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/input-3-7&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Grammar" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/grammar-4&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Get Inspired 1" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/get-inspired-1-2&auto_play=true">
+    </iframe>
+  </div>
+
+<div id="Get Inspired 2" class="audioEmbed" style="display:none;">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexandre-markus-662714240/get-inspired-2-3&auto_play=true">
+    </iframe>
+  </div>
+
+  <script>
+    function showAudio(word) {
+      // Hide all audio embeds
+      var allEmbeds = document.getElementsByClassName('audioEmbed');
+      for (var i = 0; i < allEmbeds.length; i++) {
+        allEmbeds[i].style.display = 'none';
+      }
+      
+      // Show the relevant audio embed
+      var audioEmbed = document.getElementById(word);
+      if (audioEmbed) {
+        audioEmbed.style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
